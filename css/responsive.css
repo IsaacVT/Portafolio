@@ -390,7 +390,7 @@
 
     .academic__courses__item__img img {
         width: 7rem;
-        height: fit-content;
+        height: auto;
     }
 
     .academic__courses__item__details {
@@ -430,8 +430,7 @@
 
     .modal img {
         width: 75%;
-        height: fit-content;
-        max-height: max-content;
+        height: min-content;
     }
 
     .experience__info {
