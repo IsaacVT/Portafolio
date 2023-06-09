@@ -381,7 +381,7 @@
     .academic__courses__list {
         text-align: left;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .academic__courses__item__img {
@@ -430,7 +430,7 @@
 
     .modal img {
         width: 75%;
-        height: min-content;
+        height: auto;
     }
 
     .experience__info {
