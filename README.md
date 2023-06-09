@@ -34,6 +34,6 @@ Si deseas ejecutar este portfolio en tu máquina local, sigue estos pasos:
 Si deseas contactarme o saber más sobre mis proyectos, puedes encontrarme en las siguientes redes sociales:
 
 -   LinkedIn: https://linkedin.com/in/isaac-vt
--   Sitio web: [URL de tu sitio web]
+-   Sitio web: https://portfolio-isaacvt.vercel.app
 
 ¡Gracias por visitar mi portfolio!
