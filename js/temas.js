@@ -22,17 +22,17 @@ themeButton.addEventListener("click", function () {
 });
 
 function imgFilter(theme) {
-    elements.forEach((element) => {
-        var img = element.querySelector("img");
+    links.forEach((link) => {
+        var img = link.querySelector("img");
         theme === "ligth"
             ? (img.style.filter = "contrast(0) brightness(2)")
             : (img.style.filter = "none");
     });
 
-    links.forEach((link) => {
-        var img = link.querySelector("img");
+    elements.forEach((element) => {
+        var img = element.querySelector("img");
         theme === "ligth"
-            ? (img.style.filter = "invert(100%)")
+            ? (img.style.filter = "contrast(0) brightness(2)")
             : (img.style.filter = "none");
     });
 }
