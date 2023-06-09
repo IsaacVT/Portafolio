@@ -149,6 +149,7 @@
 
     .about__paragraph {
         font-size: 12px;
+        line-height: 1rem;
     }
 
     .about__signature {
