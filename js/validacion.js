@@ -28,9 +28,9 @@ function validarInput(elemento, tipo) {
 
 function validaTexto(texto, tipo) {
     if (tipo === "letras") {
-        if (texto.length < 2) {
+        if (texto.length < 2 && texto.length > 50) {
             return {
-                msg: "El texto debe tener al menos 2 caracteres",
+                msg: "El texto debe tener de 2 a 50 caracteres",
                 valid: false,
             };
         }
