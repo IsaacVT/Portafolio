@@ -1,0 +1,42 @@
+:root {
+    --font-fam: "Raleway";
+    --cor-theme-light: #f5f5f5;
+    --cor-theme-dark: #262626;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-background-primary);
+    font-family: var(--font-fam);
+    color: var(--cor-text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    transition: 0.3s linear;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-text-primary);
+}
+
+section {
+    display: flex;
+    padding: 2rem 18rem;
+    transition: 0.3s linear;
+}
+
+button {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: color, background-color 0.2s ease-in-out;
+}

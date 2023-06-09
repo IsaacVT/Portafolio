@@ -1,0 +1,32 @@
+:root {
+    --cor-background-primary: #262626;
+    --cor-background-secondary: #1f1f1f;
+
+    --cor-card-background-primary: #6b6b6b;
+    --cor-card-background-hover: #2a7be42a;
+    --cor-card-border: #2a7ae4;
+
+    --cor-btn-background-primary: #405d83;
+    --cor-btn-background-secondary: #ffffff;
+    --cor-btn-text-primary: #ffffff;
+    --cor-btn-text-secondary: #405d83;
+    --cor-btn-border: #405d83;
+    --cor-btn-hover: #2a7be41a;
+
+    --cor-link-github: #4d638a;
+    --cor-link-linkedin: #2564b6;
+    --cor-link-instagram: #9d56ed;
+    --cor-link-curriculum: #269da5;
+
+    --cor-form-label-primary: #bebebe;
+    --cor-form-label-secondary: #bebebe;
+    --cor-form-label-focus: #519dff;
+    --cor-form-label-error: #e65542;
+
+    --cor-form-label-border-primary: #c8c8c8;
+    --cor-form-label-border-secondary: #519dff;
+    --cor-form-label-border-error: #e65542;
+
+    --cor-text-primary: #cecece;
+    --cor-text-secondary: #ffffff;
+}
