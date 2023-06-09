@@ -281,7 +281,8 @@
     }
 
     .formcontato__subtext {
-        font-size: 0.9rem;
+        font-size: 12px;
+        line-height: 1rem;
     }
 
     /*Footer*/
