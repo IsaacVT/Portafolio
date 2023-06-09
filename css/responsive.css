@@ -196,6 +196,7 @@
 
     .academic__courses__item__img img {
         width: 6rem;
+        height: auto;
     }
 
     .academic__courses__item__title h4 {
@@ -230,7 +231,7 @@
     }
 
     .modal img {
-        width: fit-content;
+        width: auto;
         height: 50%;
     }
 
