@@ -114,10 +114,15 @@
     transition: 0.275s linear;
 }
 
-.title__network__item span {
-    font-size: 1.5rem;
-    font-weight: bold;
+.title__network__item img {
+    width: 1rem;
+    height: auto;
     padding: 0 0.2rem;
+    transition: filter 0.275s linear;
+}
+
+.title__network__item:hover img {
+    filter: invert(100%);
 }
 
 .item__github:hover,
