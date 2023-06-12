@@ -1,5 +1,4 @@
 import { navActions } from "./navBar.js";
-import { changeTheme } from "./temas.js";
 import { validarInput, valueTextArea, sendForm } from "./validacion.js";
 import { cerrarModal, mostrarImagenModal } from "./modal.js";
 
@@ -29,7 +28,6 @@ evidenceElements.forEach((evidenceElement) => {
 
 // Navbar & Tema
 navActions();
-changeTheme();
 
 // Formulario
 validarInput(nombreInput, "letras");
