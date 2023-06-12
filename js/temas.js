@@ -6,7 +6,9 @@ const elements = document.querySelectorAll("li.skills__img, li.hobbies__img");
 const links = document.querySelectorAll("li.title__network__item a");
 
 themeButton.addEventListener("click", () => {
-    if (themeStyle.getAttribute("href") === "css/tema-claro.css") {
+    themeButton.classList.toggle("active");
+
+    if (themeButton.classList.contains("active")) {
         themeStyle.setAttribute("href", "css/tema-oscuro.css");
         logo.setAttribute("src", "assets/general/vector_1_2.png");
         signature.setAttribute("src", "assets/general/signature_2.png");
@@ -17,8 +19,6 @@ themeButton.addEventListener("click", () => {
         signature.setAttribute("src", "assets/general/signature_1.png");
         imgFilter("");
     }
-
-    themeButton.classList.toggle("active");
 });
 
 function imgFilter(theme) {
