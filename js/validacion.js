@@ -1,12 +1,5 @@
-// Obtener referencias a los elementos del formulario
-const nombreInput = document.getElementById("nombre");
-const emailInput = document.getElementById("email");
-const asuntoInput = document.getElementById("asunto");
-const mensajeInput = document.getElementById("mensaje");
-const formulario = document.getElementById("formulario");
-
 // Validar nombre
-function validarInput(elemento, tipo) {
+const validarInput = (elemento, tipo) => {
     let textoValido = true;
 
     elemento.addEventListener("input", () => {
@@ -24,11 +17,11 @@ function validarInput(elemento, tipo) {
             elemento.classList.remove("invalid");
         }
     });
-}
+};
 
 function validaTexto(texto, tipo) {
     if (tipo === "letras") {
-        if (texto.length < 2 && texto.length > 50) {
+        if (texto.length < 2 || texto.length > 50) {
             return {
                 msg: "El texto debe tener de 2 a 50 caracteres",
                 valid: false,
@@ -63,8 +56,7 @@ function validaTexto(texto, tipo) {
     };
 }
 
-function valueTextArea() {
-    const textarea = document.getElementById("mensaje");
+const valueTextArea = (textarea) => {
     const characterCount = document.getElementById("character-count");
     const maxLength = 300;
 
@@ -94,30 +86,23 @@ function valueTextArea() {
     });
 
     updateCharacterCount();
-}
+};
 
-function validaciones() {
-    validarInput(nombreInput, "letras");
-    validarInput(emailInput, "email");
-    validarInput(asuntoInput, "letras");
-    valueTextArea();
-}
+const sendForm = (form) => {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = e.target[0].value;
-    const email = e.target[1].value;
-    const about = e.target[2].value;
-    const msg = e.target[3].value;
+        const formData = {};
+        const formElement = e.target;
 
-    const data = {
-        name,
-        email,
-        about,
-        msg,
-    };
+        for (let element of formElement.elements) {
+            if (element.name && element.value) {
+                formData[element.name] = element.value;
+            }
+        }
 
-    console.log("file: validacion.js:113 ~ data:", data);
-});
+        console.log("Enviando formulario:", formData);
+    });
+};
 
-validaciones();
+export { validarInput, valueTextArea, sendForm };
