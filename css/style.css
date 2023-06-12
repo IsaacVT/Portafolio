@@ -14,8 +14,8 @@
     align-items: flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: none;
     background-color: var(--cor-background-primary);
+    border: 1px solid var(--cor-background-primary);
     transition: 0.3s ease;
 }
 
