@@ -5,21 +5,23 @@ const signature = document.getElementById("signature");
 const elements = document.querySelectorAll("li.skills__img, li.hobbies__img");
 const links = document.querySelectorAll("li.title__network__item a");
 
-themeButton.addEventListener("click", () => {
-    themeButton.classList.toggle("active");
+const changeTheme = () => {
+    themeButton.addEventListener("click", () => {
+        themeButton.classList.toggle("active");
 
-    if (themeButton.classList.contains("active")) {
-        themeStyle.setAttribute("href", "css/tema-oscuro.css");
-        logo.setAttribute("src", "assets/general/vector_1_2.png");
-        signature.setAttribute("src", "assets/general/signature_2.png");
-        imgFilter("ligth");
-    } else {
-        themeStyle.setAttribute("href", "css/tema-claro.css");
-        logo.setAttribute("src", "assets/general/vector_1_1.png");
-        signature.setAttribute("src", "assets/general/signature_1.png");
-        imgFilter("");
-    }
-});
+        if (themeButton.classList.contains("active")) {
+            themeStyle.setAttribute("href", "css/tema-oscuro.css");
+            logo.setAttribute("src", "assets/general/vector_1_2.png");
+            signature.setAttribute("src", "assets/general/signature_2.png");
+            imgFilter("ligth");
+        } else {
+            themeStyle.setAttribute("href", "css/tema-claro.css");
+            logo.setAttribute("src", "assets/general/vector_1_1.png");
+            signature.setAttribute("src", "assets/general/signature_1.png");
+            imgFilter("");
+        }
+    });
+};
 
 function imgFilter(theme) {
     links.forEach((link) => {
@@ -36,3 +38,5 @@ function imgFilter(theme) {
             : (img.style.filter = "none");
     });
 }
+
+export { changeTheme };
