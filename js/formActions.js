@@ -94,14 +94,21 @@ const sendForm = (form) => {
 
         const formData = {};
         const formElement = e.target;
+        let resetElementCount = null;
 
         for (let element of formElement.elements) {
             if (element.name && element.value) {
                 formData[element.name] = element.value;
+
+                if (element.name === "Mensaje") {
+                    resetElementCount = element;
+                }
             }
         }
 
         console.log("Enviando formulario:", formData);
+        formElement.reset();
+        valueTextArea(resetElementCount);
     });
 };
 
