@@ -293,6 +293,10 @@
 
 /*Mobile*/
 @media (min-width: 375px) and (max-width: 767px) {
+    .container {
+        margin-top: 4.5rem;
+    }
+
     section {
         padding: 1rem 1rem;
     }
@@ -313,6 +317,7 @@
 
     /*Titulo*/
     .title {
+        margin-top: 4rem;
         padding-bottom: 1rem;
     }
 
@@ -322,7 +327,8 @@
     }
 
     .title__profile {
-        position: absolute;
+        position: fixed;
+        z-index: 2;
         top: 1rem;
         left: 1rem;
         max-width: 3rem;
@@ -354,6 +360,10 @@
     }
 
     /*Sección sobre mi*/
+    .about {
+        padding: 1rem 1rem;
+    }
+
     .about__container {
         margin-right: auto;
     }
@@ -411,6 +421,7 @@
 
     /*Experiencia Profesional*/
     .experience {
+        padding: 2rem 1rem;
         gap: 2rem;
         padding-bottom: 2rem;
     }
@@ -464,7 +475,7 @@
 
     /*Contacto*/
     .formcontato {
-        padding-bottom: 2rem;
+        padding: 2rem 1rem;
     }
 
     .formcontato--esquerda {
