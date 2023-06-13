@@ -95,6 +95,7 @@ const sendForm = (form) => {
         const formData = {};
         const formElement = e.target;
         let resetElementCount = null;
+        let btnSubmit = null;
 
         for (let element of formElement.elements) {
             if (element.name && element.value) {
@@ -104,9 +105,24 @@ const sendForm = (form) => {
                     resetElementCount = element;
                 }
             }
+
+            if (element.type === "submit") {
+                btnSubmit = element;
+            }
         }
 
         console.log("Enviando formulario:", formData);
+
+        form.classList.add("send");
+        btnSubmit.classList.add("submit");
+        btnSubmit.innerHTML = "✔";
+
+        setTimeout(() => {
+            btnSubmit.innerHTML = "Enviar mensaje";
+            btnSubmit.classList.remove("submit");
+            form.classList.remove("send");
+        }, 2500);
+
         formElement.reset();
         valueTextArea(resetElementCount);
     });

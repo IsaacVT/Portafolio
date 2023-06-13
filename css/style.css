@@ -606,15 +606,31 @@ textarea {
 }
 
 .formcontato__boton {
-    align-self: start;
     color: var(--cor-btn-text-primary);
     background-color: var(--cor-btn-background-primary);
     border: 1px solid var(--cor-btn-border);
+    transition: height 1s linear;
 }
 
 .formcontato__boton:hover {
     color: var(--cor-btn-text-secondary);
     background-color: var(--cor-btn-background-secondary);
+}
+
+.submit,
+.submit:focus {
+    background-color: var(--cor-btn-done);
+    border-color: var(--cor-btn-done);
+    color: var(--cor-btn-text-primary);
+    cursor: wait;
+    height: 34.9rem;
+    font-size: 5rem;
+    transition: 0.5s linear;
+}
+
+.formcontacto__preguntas.send .form {
+    display: none;
+    transition: 0.5s linear;
 }
 
 /*footeer*/
