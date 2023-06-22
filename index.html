@@ -586,34 +586,36 @@
                         México, Ciudad de México <br>
                         Email - develop1530@gmail.com
                     </h3>
+
                     <form class="formcontacto__preguntas" id="formulario">
-                        <div class="form">
+                        <div class="field">
                             <input type="text" id="nombre" name="Nombre" autocomplete="off" required />
-                            <label for="text" class="label-name">
+                            <label for="nombre" class="label-name">
                                 <span class="content-name">
                                     Nombre
                                 </span>
                             </label>
                         </div>
-                        <div class="form">
+
+                        <div class="field">
                             <input type="text" id="email" name="Email" autocomplete="off" required />
-                            <label for="text" class="label-name">
+                            <label for="email" class="label-name">
                                 <span class="content-name">
                                     Email
                                 </span>
                             </label>
                         </div>
-                        <div class="form">
+                        <div class="field">
                             <input type="text" id="asunto" name="Asunto" autocomplete="off" required />
-                            <label for="text" class="label-name">
+                            <label for="asunto" class="label-name">
                                 <span class="content-name">
                                     Asunto
                                 </span>
                             </label>
                         </div>
-                        <div class="form expand">
+                        <div class="field expand">
                             <textarea type="text" id="mensaje" name="Mensaje" autocomplete="off" required></textarea>
-                            <label for="text" class="label-name">
+                            <label for="mensaje" class="label-name">
                                 <span class="content-name">
                                     Mensaje
                                 </span>
@@ -635,6 +637,11 @@
     </div>
     <!-- Script del documento JavaScript -->
     <script type='module' src="js\index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('DvtLmgSx7MKjgE0PX')
+    </script>
 </body>
 
 </html>

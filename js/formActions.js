@@ -93,13 +93,15 @@ const sendForm = (form) => {
         e.preventDefault();
 
         const formData = {};
+
         const formElement = e.target;
         let resetElementCount = null;
         let btnSubmit = null;
 
         for (let element of formElement.elements) {
             if (element.name && element.value) {
-                formData[element.name] = element.value;
+                const eNombre = element.name.toLowerCase();
+                formData[eNombre] = element.value;
 
                 if (element.name === "Mensaje") {
                     resetElementCount = element;
@@ -111,20 +113,30 @@ const sendForm = (form) => {
             }
         }
 
-        console.log("Enviando formulario:", formData);
+        const serviceID = "default_service";
+        const templateID = "template_70ro9h9";
+        const params = formData;
 
         form.classList.add("send");
         btnSubmit.classList.add("submit");
-        btnSubmit.innerHTML = "✔";
+        btnSubmit.innerHTML =
+            "✔<br><br>Gracias por escribirme.<br><br>Me pondre en contacto<br>lo más pronto posible.";
 
-        setTimeout(() => {
-            btnSubmit.innerHTML = "Enviar mensaje";
-            btnSubmit.classList.remove("submit");
-            form.classList.remove("send");
-        }, 2500);
+        emailjs
+            .send(serviceID, templateID, params)
+            .then(() => {
+                setTimeout(() => {
+                    btnSubmit.innerHTML = "Enviar mensaje";
+                    btnSubmit.classList.remove("submit");
+                    form.classList.remove("send");
+                }, 5000);
 
-        formElement.reset();
-        valueTextArea(resetElementCount);
+                formElement.reset();
+                valueTextArea(resetElementCount);
+            })
+            .catch((err) => {
+                console.log(JSON.stringify(err));
+            });
     });
 };
 

@@ -24,14 +24,8 @@ evidenceElements.forEach((evidenceElement) => {
 });
 
 // Formulario
-const nombreInput = document.getElementById("nombre");
-const emailInput = document.getElementById("email");
-const asuntoInput = document.getElementById("asunto");
-const mensaje = document.getElementById("mensaje");
-const formulario = document.getElementById("formulario");
-
-validarInput(nombreInput, "letras");
-validarInput(emailInput, "email");
-validarInput(asuntoInput, "letras");
-valueTextArea(mensaje);
-sendForm(formulario);
+validarInput(document.getElementById("nombre"), "letras");
+validarInput(document.getElementById("email"), "email");
+validarInput(document.getElementById("asunto"), "letras");
+valueTextArea(document.getElementById("mensaje"));
+sendForm(document.getElementById("formulario"));
