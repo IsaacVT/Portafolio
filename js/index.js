@@ -3,6 +3,7 @@ import { changeTheme } from "./temas.js";
 import { validarInput, valueTextArea, sendForm } from "./formActions.js";
 import { cerrarModal, mostrarImagenModal } from "./modal.js";
 import { printBoxes } from "./miniBoxes.js";
+import { printBlocksExperience } from "./experience.js";
 
 // Navbar
 navActions();
@@ -13,6 +14,8 @@ printBoxes(document.getElementById("skills-box"), "skills");
 printBoxes(document.getElementById("hobbies-box"), "hobbies");
 
 // Experiencia
+printBlocksExperience(document.getElementById("xp"));
+
 const evidenceElements = document.querySelectorAll(".experience__evidence");
 evidenceElements.forEach((evidenceElement) => {
     const imgElements = evidenceElement.querySelectorAll("img");
