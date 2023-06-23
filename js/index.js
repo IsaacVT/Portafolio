@@ -2,10 +2,15 @@ import { navActions } from "./navBar.js";
 import { changeTheme } from "./temas.js";
 import { validarInput, valueTextArea, sendForm } from "./formActions.js";
 import { cerrarModal, mostrarImagenModal } from "./modal.js";
+import { printBoxes } from "./miniBoxes.js";
 
 // Navbar
 navActions();
 changeTheme();
+
+// Skills
+printBoxes(document.getElementById("skills-box"), "skills");
+printBoxes(document.getElementById("hobbies-box"), "hobbies");
 
 // Experiencia
 const evidenceElements = document.querySelectorAll(".experience__evidence");
