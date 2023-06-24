@@ -5,11 +5,9 @@ const signature = document.getElementById("signature");
 
 const changeTheme = () => {
     themeButton.addEventListener("click", () => {
-        const elements = document.querySelectorAll(
-            "li.skills__img, li.hobbies__img"
+        const listElements = document.querySelectorAll(
+            "li.skills__img, li.hobbies__img, li.title__network__item a"
         );
-
-        const links = document.querySelectorAll("li.title__network__item a");
 
         themeButton.classList.toggle("active");
 
@@ -17,14 +15,12 @@ const changeTheme = () => {
             themeStyle.setAttribute("href", "css/tema-oscuro.css");
             logo.setAttribute("src", "assets/general/vector_1_2.png");
             signature.setAttribute("src", "assets/general/signature_2.png");
-            imgFilter("dark", elements);
-            imgFilter("dark", links);
+            imgFilter("dark", listElements);
         } else {
             themeStyle.setAttribute("href", "css/tema-claro.css");
             logo.setAttribute("src", "assets/general/vector_1_1.png");
             signature.setAttribute("src", "assets/general/signature_1.png");
-            imgFilter("ligth", elements);
-            imgFilter("ligth", links);
+            imgFilter("ligth", listElements);
         }
     });
 };
