@@ -17,6 +17,7 @@ export const printBoxes = (container, type) => {
         liImg.classList.add(type + "__img");
         const img = document.createElement("img");
         img.src = urlImg;
+
         liImg.appendChild(img);
 
         const liName = document.createElement("li");
