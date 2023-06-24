@@ -29,7 +29,7 @@ export const xpList = [
             "clock/digital_clock_timer.png",
         ],
         repo: "https://github.com/IsaacVT/Digital-clock",
-        demo: "https://digital-clock-pearl.vercel.app/",
+        demo: "https://digital-clock-pearl.vercel.app",
     },
     {
         title: "Alura Org",
@@ -49,7 +49,7 @@ export const xpList = [
             "validaciones/validaciones_1.png",
             "validaciones/validaciones_1.png",
         ],
-        repo: "__repo__",
+        repo: "https://github.com/IsaacVT/Validaciones",
         demo: "https://validaciones-seven.vercel.app",
     },
 ];
