@@ -401,8 +401,8 @@
         font-size: 0.75rem;
         word-wrap: normal;
         border-radius: 0.5rem;
-        color: var(--cor-text-secondary);
-        backdrop-filter: brightness(0.25);
+        color: var(--cor-minibox-text);
+        background-color: var(--cor-minibox-text-background);
         transform: translateX(-1rem) translateY(-4.25rem);
         clip-path: polygon(
             0 100%,
