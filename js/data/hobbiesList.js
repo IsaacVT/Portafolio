@@ -1,5 +1,5 @@
 export const hobbies = [
-    { name: "Oir música ", image: "music_icon.png" },
+    { name: "Escuchar música ", image: "music_icon.png" },
     { name: "DJ", image: "dj_icon.png" },
     { name: "Gamer", image: "gamer_icon.png" },
     { name: "Ver series", image: "tv_icon.png" },

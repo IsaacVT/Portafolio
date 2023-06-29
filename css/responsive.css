@@ -59,15 +59,11 @@
         width: 11rem;
         height: 11rem;
         margin: 0.4rem;
-        object-fit: cover;
-        cursor: pointer;
-        border-radius: 1rem;
-        border: 1px solid var(--cor-de-form-border-secondary);
     }
 
     .modal img {
         width: fit-content;
-        height: 70%;
+        height: 60%;
     }
 
     /*Contacto*/
@@ -169,7 +165,6 @@
 
     .skills__box,
     .hobbies__box {
-        height: 7rem;
         width: 13.6rem;
     }
 
@@ -238,12 +233,12 @@
     .experience__info {
         justify-content: space-evenly;
         flex-direction: row;
-        width: 75%;
-        gap: 2rem;
+        width: 100%;
+        gap: 1rem;
     }
 
     .experience__details {
-        width: 13rem;
+        width: 25rem;
     }
 
     .experience__title {
@@ -256,6 +251,7 @@
 
     .experience__description {
         gap: 1rem;
+        align-items: center;
     }
 
     /*Contacto*/
@@ -379,8 +375,61 @@
     /*Skills & Hobbies*/
     .skills__box,
     .hobbies__box {
-        height: 7rem;
-        width: 10rem;
+        height: 5.5rem;
+        width: 5rem;
+        align-items: center;
+    }
+
+    .skills__box ul,
+    .hobbies__box ul {
+        text-align: center;
+    }
+
+    .skills__img,
+    .hobbies__img {
+        margin: 0rem;
+    }
+
+    .skills__name,
+    .hobbies__name {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+        padding-bottom: 1.25rem;
+        width: 4rem;
+        font-size: 0.75rem;
+        word-wrap: normal;
+        border-radius: 0.5rem;
+        color: var(--cor-text-secondary);
+        backdrop-filter: brightness(0.25);
+        transform: translateX(-1rem) translateY(-4.25rem);
+        clip-path: polygon(
+            0 100%,
+            100% 100%,
+            100% 100%,
+            70% 100%,
+            50% 100%,
+            30% 100%,
+            0 100%
+        );
+        transition: clip-path 0.1s linear;
+    }
+
+    .skills__box:hover,
+    .hobbies__box:hover {
+        .skills__name,
+        .hobbies__name {
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% 71%,
+                60% 70%,
+                50% 100%,
+                40% 70%,
+                0 70%
+            );
+        }
     }
 
     /*Formación Académica*/

@@ -5,7 +5,7 @@ export const printBlocksExperience = (container) => {
         const box = document.createElement("div");
 
         box.className =
-            (index + 1) % 2 ? "experience__box par" : "experience__box";
+            (index + 1) % 2 ? "experience__box" : "experience__box par";
 
         const boxEvidence = document.createElement("div");
         boxEvidence.className = "experience__evidence";
@@ -50,6 +50,18 @@ export const printBlocksExperience = (container) => {
         h3.textContent = item.description;
         infoDetails.appendChild(h3);
 
+        // Info tags
+        const infoTags = document.createElement("div");
+        infoTags.className = "experience__tags";
+
+        item.tags.forEach((tag) => {
+            const itemTag = document.createElement("span");
+            itemTag.className = "tag";
+            itemTag.textContent = tag;
+            infoTags.appendChild(itemTag);
+        });
+
+        infoDetails.appendChild(infoTags);
         boxInfo.appendChild(infoDetails);
 
         const infoDescription = document.createElement("div");

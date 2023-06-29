@@ -12,7 +12,7 @@ export const skills = [
     { name: "MySQL", image: "mysql_icon.png" },
     { name: "PostgreSQL", image: "postgresql_icon.png" },
     { name: "GraphQL", image: "graphql_icon.png" },
-    { name: "Mongo", image: "mongo_icon.png" },
+    { name: "MongoDB", image: "mongo_icon.png" },
     { name: "Cassandra", image: "cassandra_icon.png" },
     { name: "Contenful", image: "contentful_icon.png" },
     { name: "Figma", image: "figma_icon.png" },
