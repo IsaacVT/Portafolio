@@ -384,7 +384,7 @@
     height: 100%;
     overflow: auto;
     backdrop-filter: brightness(50%) blur(0.5rem);
-    -webkit-backdrop-filter: brightness(50%) blur(0.5rem);
+    -webkit-backdrop-filter: brightness(40%) blur(0.5rem);
 }
 
 .modal img {
