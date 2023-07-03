@@ -69,19 +69,15 @@ const deployMenu = () => {
 const fixNavegation = () => {
     var menuList = document.getElementById("menu__list");
     var menuItems = document.querySelectorAll(".menu__list__item a");
+    var showMenuBtn = document.getElementById("btn__show__menu");
 
     menuItems.forEach(function (item) {
         item.addEventListener("click", function (event) {
             event.preventDefault();
 
             if (menuList.classList.contains("active")) {
-                const showMenuBtn = document.querySelector(".btn__show__menu");
-
                 menuList.classList.remove("active");
-
-                if (showMenuBtn) {
-                    showMenuBtn.classList.remove("active");
-                }
+                showMenuBtn.classList.remove("active");
             }
 
             var menuHeight = 87;
