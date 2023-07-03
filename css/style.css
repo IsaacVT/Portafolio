@@ -132,6 +132,7 @@
     border-radius: 0.3rem;
     padding: 0.3rem 0.6rem;
     transition: 0.275s linear;
+    padding-top: 0.4rem;
 }
 
 .title__network__item img {
@@ -148,7 +149,7 @@
 .item__github:hover,
 .item__linkedin:hover,
 .item__instagram:hover,
-.item__curriculo:hover {
+.item__cv:hover {
     color: var(--cor-text-secondary);
 }
 
@@ -164,7 +165,7 @@
     background-color: var(--cor-link-instagram);
 }
 
-.item__curriculo:hover {
+.item__cv:hover {
     background-color: var(--cor-link-curriculum);
 }
 
