@@ -56,12 +56,46 @@ const returnTop = () => {
     }
 };
 
+const deployMenu = () => {
+    var menuContainer = document.getElementById("menu__container");
+    var menuList = document.getElementById("menu__list");
+
+    if (window.screen.width < 1024) {
+        const menuDeployBtn = document.createElement("li");
+        menuDeployBtn.setAttribute("class", "btn__show__menu");
+
+        menuDeployBtn.addEventListener("click", () => {
+            menuList.classList.toggle("active");
+            menuDeployBtn.classList.toggle("active");
+        });
+
+        menuContainer.appendChild(menuDeployBtn);
+    } else {
+        const showMenuBtn = document.querySelector(".btn__show__menu");
+
+        if (showMenuBtn) {
+            showMenuBtn.remove();
+        }
+    }
+};
+
 const fixNavegation = () => {
+    var menuList = document.getElementById("menu__list");
     var menuItems = document.querySelectorAll(".menu__list__item a");
 
     menuItems.forEach(function (item) {
         item.addEventListener("click", function (event) {
             event.preventDefault();
+
+            if (menuList.classList.contains("active")) {
+                const showMenuBtn = document.querySelector(".btn__show__menu");
+
+                menuList.classList.remove("active");
+
+                if (showMenuBtn) {
+                    showMenuBtn.classList.remove("active");
+                }
+            }
 
             var menuHeight = 87;
             var target = document.querySelector(this.getAttribute("href"));
@@ -76,6 +110,7 @@ const fixNavegation = () => {
 };
 
 const navActions = () => {
+    deployMenu();
     changeHeight();
     returnTop();
     fixNavegation();

@@ -100,7 +100,93 @@
     }
 
     .menu__list {
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 25vw;
+        height: 100vh;
+        margin: 0;
+        gap: 5%;
+        background-color: var(--cor-menu-bg);
+        padding: 0;
+        padding-top: 7rem;
+        clip-path: inset(0 0 0 100%);
+        box-shadow: inset 10px 0px 1rem var(--cor-menu-btn-shadow);
+        transition: clip-path 0.25s ease-in-out;
+    }
+
+    .menu__list li {
         display: none;
+    }
+
+    .menu__list.active {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .menu__list.active li {
+        display: list-item;
+    }
+
+    .btn__show__menu {
+        display: flex;
+        z-index: 1;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--cor-menu-btn-open);
+        clip-path: polygon(
+            0 0,
+            0 20%,
+            50% 20%,
+            50% 40%,
+            0 40%,
+            0 60%,
+            50% 60%,
+            50% 80%,
+            0 80%,
+            0 100%,
+            50% 100%,
+            100% 100%,
+            100% 80%,
+            50% 80%,
+            50% 60%,
+            100% 60%,
+            100% 40%,
+            50% 40%,
+            50% 20%,
+            100% 20%,
+            100% 0,
+            50% 0
+        );
+        transition: clip-path 0.25s ease-in-out;
+    }
+
+    .btn__show__menu.active {
+        clip-path: polygon(
+            20% 0,
+            0 21%,
+            30% 50%,
+            30% 50%,
+            0 50%,
+            0 50%,
+            30% 50%,
+            0 80%,
+            0 80%,
+            20% 100%,
+            50% 70%,
+            80% 100%,
+            100% 80%,
+            100% 80%,
+            70% 50%,
+            100% 50%,
+            100% 50%,
+            70% 50%,
+            70% 50%,
+            100% 18%,
+            80% 0,
+            50% 30%
+        );
     }
 
     /*Titulo*/
@@ -308,7 +394,93 @@
     }
 
     .menu__list {
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        margin: 0;
+        gap: 5%;
+        background-color: var(--cor-menu-bg);
+        padding: 0;
+        padding-top: 7rem;
+        clip-path: inset(0 0 0 100%);
+        box-shadow: inset 10px 0px 1rem var(--cor-menu-btn-shadow);
+        transition: clip-path 0.25s ease-in-out;
+    }
+
+    .menu__list li {
         display: none;
+    }
+
+    .menu__list.active {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .menu__list.active li {
+        display: list-item;
+    }
+
+    .btn__show__menu {
+        display: flex;
+        z-index: 1;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--cor-menu-btn-open);
+        clip-path: polygon(
+            0 0,
+            0 20%,
+            50% 20%,
+            50% 40%,
+            0 40%,
+            0 60%,
+            50% 60%,
+            50% 80%,
+            0 80%,
+            0 100%,
+            50% 100%,
+            100% 100%,
+            100% 80%,
+            50% 80%,
+            50% 60%,
+            100% 60%,
+            100% 40%,
+            50% 40%,
+            50% 20%,
+            100% 20%,
+            100% 0,
+            50% 0
+        );
+        transition: clip-path 0.25s ease-in-out;
+    }
+
+    .btn__show__menu.active {
+        clip-path: polygon(
+            20% 0,
+            0 21%,
+            30% 50%,
+            30% 50%,
+            0 50%,
+            0 50%,
+            30% 50%,
+            0 80%,
+            0 80%,
+            20% 100%,
+            50% 70%,
+            80% 100%,
+            100% 80%,
+            100% 80%,
+            70% 50%,
+            100% 50%,
+            100% 50%,
+            70% 50%,
+            70% 50%,
+            100% 18%,
+            80% 0,
+            50% 30%
+        );
     }
 
     /*Titulo*/
