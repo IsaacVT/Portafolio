@@ -167,7 +167,7 @@
             100% 0,
             50% 0
         );
-        transition: clip-path 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
     }
 
     .btn__show__menu.active {
@@ -416,7 +416,7 @@
         padding-top: 7rem;
         clip-path: inset(0 0 0 100%);
         box-shadow: inset 10px 0px 1rem var(--cor-menu-btn-shadow);
-        transition: clip-path 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
     }
 
     .menu__list li {
