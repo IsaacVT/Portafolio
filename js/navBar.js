@@ -57,26 +57,13 @@ const returnTop = () => {
 };
 
 const deployMenu = () => {
-    var menuContainer = document.getElementById("menu__container");
     var menuList = document.getElementById("menu__list");
+    var menuDeployBtn = document.getElementById("btn__show__menu");
 
-    if (window.screen.width < 1024) {
-        const menuDeployBtn = document.createElement("li");
-        menuDeployBtn.setAttribute("class", "btn__show__menu");
-
-        menuDeployBtn.addEventListener("click", () => {
-            menuList.classList.toggle("active");
-            menuDeployBtn.classList.toggle("active");
-        });
-
-        menuContainer.appendChild(menuDeployBtn);
-    } else {
-        const showMenuBtn = document.querySelector(".btn__show__menu");
-
-        if (showMenuBtn) {
-            showMenuBtn.remove();
-        }
-    }
+    menuDeployBtn.addEventListener("click", () => {
+        menuList.classList.toggle("active");
+        menuDeployBtn.classList.toggle("active");
+    });
 };
 
 const fixNavegation = () => {

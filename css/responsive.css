@@ -4,6 +4,10 @@
         padding: 2rem 9.5rem;
     }
 
+    .btn__show__menu {
+        display: none;
+    }
+
     .title__div {
         gap: 1rem;
     }
@@ -12,6 +16,10 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
     section {
         padding: 2rem 2rem;
+    }
+
+    .btn__show__menu {
+        display: none;
     }
 
     /*Titulo*/
